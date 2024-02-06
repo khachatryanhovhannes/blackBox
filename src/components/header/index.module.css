@@ -6,6 +6,7 @@
     flex-direction: column;
     justify-content: space-between;
     font-family: 'Exo 2', sans-serif;
+    padding: 40px;
 }
 
 .logoAndLogin {
@@ -20,6 +21,49 @@
     font-size: 160px;
 }
 
+.loginLink {
+    height: 70px;
+    transition: 0.5s;
+    width: 70px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: 1px solid white;
+    font-size: 12px;
+    text-decoration: none;
+    color: white;
+}
+
+.loginLink:hover {
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+}
+
+.loginLink:hover .loginLinkImg {
+    filter: invert(100%);
+    transition: 0.5s;
+
+}
+
 .headerDown {
     color: white;
+    font-size: 40px;
+}
+
+.animationContainer {
+    top: 0;
+    position: relative;
+    margin: 0 auto;
+    max-width: 50%;
+    min-height: 200px;
+}
+
+.animationContainerText {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
 }
