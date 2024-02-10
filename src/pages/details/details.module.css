@@ -1,0 +1,28 @@
+.details {
+    width: 60%;
+    margin: 0 auto;
+    color: white;
+    position: relative;
+}
+
+.details h2 {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: 44px;
+    z-index: 100;
+}
+
+.details p {
+    font-size: 25px;
+}
+
+.detilsText {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: white;
+    font-size: 48px;
+    gap: 10px;
+}

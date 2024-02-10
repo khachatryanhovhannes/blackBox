@@ -1,10 +1,10 @@
 import './App.css'
-import { Header } from './components'
+import Routing from './routing'
 
 function App() {
   return (
     <div className='container'>
-      <Header />
+      <Routing />
     </div>
   )
 }
