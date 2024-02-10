@@ -107,34 +107,34 @@ const WinningProject = () => {
       </div>
       <div className={classes.slider}>
         <div className={classes.slide1} >
-          <Link className={classes.imageLink} to="#">
+          <Link className={classes.imageLink} to="/meditation-with-four-elements">
             <img src={image2} alt="Sensorial Xplorers" />
           </Link>
           <div className={classes.sectionText}>
             <p>Meditation with Four
               <br />
               Elements</p>
-            <Link to="#" className={classes.seeMore}>See More <img src={rightArrow} alt="-->" /></Link>
+            <Link to="/meditation-with-four-elements" className={classes.seeMore}>See More <img src={rightArrow} alt="-->" /></Link>
           </div>
         </div>
 
         <div className={classes.slide2} >
-          <Link className={classes.imageLink} to="#">
+          <Link className={classes.imageLink} to="/immersion">
             <img src={image1} alt="Sensorial Xplorers" />
           </Link>
           <div className={classes.sectionText}>
             <p>Immersion</p>
-            <Link to="#" className={classes.seeMore}>See More <img src={rightArrow} alt="-->" /></Link>
+            <Link to="/immersion" className={classes.seeMore}>See More <img src={rightArrow} alt="-->" /></Link>
           </div>
         </div>
 
         <div className={classes.slide3} >
-          <Link className={classes.imageLink} to="#">
+          <Link className={classes.imageLink} to="/the-mount-a">
             <img src={image3} alt="Sensorial Xplorers" />
           </Link>
           <div className={classes.sectionText}>
             <p>The Mount A</p>
-            <Link to="#" className={classes.seeMore}>See More <img src={rightArrow} alt="-->" /></Link>
+            <Link to="/the-mount-a" className={classes.seeMore}>See More <img src={rightArrow} alt="-->" /></Link>
           </div>
         </div>
       </div>

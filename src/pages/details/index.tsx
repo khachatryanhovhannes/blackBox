@@ -3,8 +3,6 @@ import detailsImage from "../../assets/box.png"
 import styled from 'styled-components';
 import { useEffect, useState } from "react";
 
-// Import statements remain the same
-
 const Image = styled.div`
   position: absolute;
   transition: all ease-in-out;
