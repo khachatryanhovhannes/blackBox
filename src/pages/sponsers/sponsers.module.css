@@ -13,18 +13,16 @@
     z-index: 100;
 }
 
-.details p {
-    font-size: 25px;
-}
-
-.detilsText {
-    padding: 40px;
+.images{
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    color: white;
-    font-size: 48px;
-    gap: 10px;
+    justify-content: center;
+    max-width: 90%;
+    margin: 200px auto;
+}
+
+.images img {
+    max-width: 100%;
 }
 
 
@@ -42,11 +40,4 @@
         font-size: 20px;
     }
 
-    .details p{
-        font-size: 16px;
-    }
-
-    .detilsText{
-        font-size: 18px;
-    }
 }

@@ -11,13 +11,14 @@ const Image = styled.div`
 
 
 const Mediation = () => {
+    const windowSize = window.innerWidth;
     const [position, setPosition] = useState({ x: 0, y: 0, rotate: 70 });
     const [imageParams, setimageParams] = useState({
         width: 0,
         height: 0,
-        borderLeft: '50px solid transparent',
-        borderRight: '50px solid transparent',
-        borderBottom: ' 100px solid #191919',
+        borderLeft: `${windowSize > 600 ? 50 : 25}px solid transparent`,
+        borderRight: `${windowSize > 600 ? 50 : 25}px solid transparent`,
+        borderBottom: `${windowSize > 600 ? 100 : 50}px solid #191919`,
         backgroundColor: "transparent",
         borderRadius: 0,
     });
@@ -39,37 +40,37 @@ const Mediation = () => {
 
             if (newX < containerWidth / 3 + 50) {
                 setimageParams({
-                    width: 100,
-                    height: 100,
-                    borderLeft: '',
-                    borderRight: '',
-                    borderBottom: '',
-                    backgroundColor: "#191919",
-                    borderRadius: 0,
+                  width: windowSize > 600 ? 100 : 50,
+                  height: windowSize > 600 ? 100 : 50,
+                  borderLeft: '',
+                  borderRight: '',
+                  borderBottom: '',
+                  backgroundColor: "#191919",
+                  borderRadius: 0,
                 });
-            } else if (newX < 2 * (containerWidth / 3) + 50 && newX > 150) {
+              } else if (newX < 2 * (containerWidth / 3) + 50 && newX > 150) {
                 setimageParams({
-                    width: 0,
-                    height: 0,
-                    borderLeft: '50px solid transparent',
-                    borderRight: '50px solid transparent',
-                    borderBottom: '100px solid #191919',
-                    backgroundColor: "transparent",
-                    borderRadius: 0,
+                  width: 0,
+                  height: 0,
+                  borderLeft: `${windowSize > 600 ? 50 : 25}px solid transparent`,
+                  borderRight: `${windowSize > 600 ? 50 : 25}px solid transparent`,
+                  borderBottom: `${windowSize > 600 ? 100 : 50}px solid #191919`,
+                  backgroundColor: "transparent",
+                  borderRadius: 0,
                 });
-            } else if (newX < containerWidth - 10 && newX > 50) {
+              } else if (newX < containerWidth - 10 && newX > 50) {
                 setimageParams({
-                    width: 100,
-                    height: 100,
-                    borderLeft: '',
-                    borderRight: '',
-                    borderBottom: '',
-                    backgroundColor: "#191919",
-                    borderRadius: 50,
+                  width: windowSize > 600 ? 100 : 50,
+                  height: windowSize > 600 ? 100 : 50,
+                  borderLeft: '',
+                  borderRight: '',
+                  borderBottom: '',
+                  backgroundColor: "#191919",
+                  borderRadius: 50,
                 });
-            } else {
+              } else {
                 setPosition({ x: 0, y: 0, rotate: 70 });
-            }
+              }
         };
 
         animationFrameId = requestAnimationFrame(animate);
@@ -100,6 +101,7 @@ const Mediation = () => {
                         <span>Meditation with Four Elements</span>
                     </h2>
                     <p>
+                        <img src={image} className={classes.responsiveShowImage} alt="box" />
                         “Meditation with Four Elements” project authored by Gohar Sargsyan, is one of the winning entries from the
                         'Sensorial Xplorers' idea contest held by the Enterprise Incubator Foundation at the Gyumri Technology Center.
                         The installation creates an experience that connects people with nature utilizing technology to guide

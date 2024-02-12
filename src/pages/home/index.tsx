@@ -8,13 +8,14 @@ transition: all ease-in-out;
 `
 
 const Home = () => {
+  const windowSize = window.innerWidth;
   const [position, setPosition] = useState({ x: 160, y: 0, rotate: 70 });
   const [imageParams, setimageParams] = useState({
     width: 0,
     height: 0,
-    borderLeft: '50px solid transparent',
-    borderRight: '50px solid transparent',
-    borderBottom: ' 100px solid #191919',
+    borderLeft: `${windowSize > 600 ? 50 : 25}px solid transparent`,
+    borderRight: `${windowSize > 600 ? 50 : 25}px solid transparent`,
+    borderBottom: `${windowSize > 600 ? 100 : 50}px solid #191919`,
     backgroundColor: "transparent",
     borderRadius: 0,
   })
@@ -28,8 +29,8 @@ const Home = () => {
       setPosition({ x: event.layerX - 120, y: event.layerY - 10, rotate: position.rotate += 3 });
       if (event.layerX < containerWidth / 3 + 50 && event.layerX > 50) {
         setimageParams({
-          width: 120,
-          height: 120,
+          width: windowSize > 600 ? 120 : 60,
+          height: windowSize > 600 ? 120 : 60,
           borderLeft: '',
           borderRight: '',
           borderBottom: '',
@@ -37,21 +38,20 @@ const Home = () => {
           borderRadius: 0,
         })
       } else if (event.layerX < 2 * (containerWidth / 3) + 50 && event.layerX > 150) {
-        console.log(containerWidth)
         console.log
         setimageParams({
           width: 0,
           height: 0,
-          borderLeft: '70px solid transparent',
-          borderRight: '70px solid transparent',
-          borderBottom: ' 140px solid #191919',
+          borderLeft: `${windowSize > 600 ? 70 : 35}px solid transparent`,
+          borderRight: `${windowSize > 600 ? 70 : 35}px solid transparent`,
+          borderBottom: `${windowSize > 600 ? 140 : 70}px solid #191919`,
           backgroundColor: "transparent",
           borderRadius: 0,
         })
       } else if (event.layerX < containerWidth - 10 && event.layerX > 50) {
         setimageParams({
-          width: 120,
-          height: 120,
+          width: windowSize > 600 ? 120 : 60,
+          height: windowSize > 600 ? 120 : 60,
           borderLeft: '',
           borderRight: '',
           borderBottom: '',
@@ -62,9 +62,9 @@ const Home = () => {
         setimageParams({
           width: 0,
           height: 0,
-          borderLeft: '70px solid transparent',
-          borderRight: '70px solid transparent',
-          borderBottom: ' 140px solid #191919',
+          borderLeft: `${windowSize > 600 ? 70 : 35}px solid transparent`,
+          borderRight: `${windowSize > 600 ? 70 : 35}px solid transparent`,
+          borderBottom: `${windowSize > 600 ? 140 : 70}px solid #191919`,
           backgroundColor: "transparent",
           borderRadius: 0,
         })

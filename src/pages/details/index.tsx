@@ -9,13 +9,15 @@ const Image = styled.div`
 `;
 
 const Details = () => {
+
+  const windowSize = window.innerWidth;
   const [position, setPosition] = useState({ x: 0, y: 0, rotate: 70 });
   const [imageParams, setimageParams] = useState({
     width: 0,
     height: 0,
-    borderLeft: '50px solid transparent',
-    borderRight: '50px solid transparent',
-    borderBottom: ' 100px solid #191919',
+    borderLeft: `${windowSize > 600 ? 50 : 25}px solid transparent`,
+    borderRight: `${windowSize > 600 ? 50 : 25}px solid transparent`,
+    borderBottom: `${windowSize > 600 ? 100 : 50}px solid #191919`,
     backgroundColor: "transparent",
     borderRadius: 0,
   });
@@ -37,8 +39,8 @@ const Details = () => {
 
       if (newX < containerWidth / 3 + 50) {
         setimageParams({
-          width: 100,
-          height: 100,
+          width: windowSize > 600 ? 100 : 50,
+          height: windowSize > 600 ? 100 : 50,
           borderLeft: '',
           borderRight: '',
           borderBottom: '',
@@ -49,16 +51,16 @@ const Details = () => {
         setimageParams({
           width: 0,
           height: 0,
-          borderLeft: '50px solid transparent',
-          borderRight: '50px solid transparent',
-          borderBottom: '100px solid #191919',
+          borderLeft: `${windowSize > 600 ? 50 : 25}px solid transparent`,
+          borderRight: `${windowSize > 600 ? 50 : 25}px solid transparent`,
+          borderBottom: `${windowSize > 600 ? 100 : 50}px solid #191919`,
           backgroundColor: "transparent",
           borderRadius: 0,
         });
       } else if (newX < containerWidth - 10 && newX > 50) {
         setimageParams({
-          width: 100,
-          height: 100,
+          width: windowSize > 600 ? 100 : 50,
+          height: windowSize > 600 ? 100 : 50,
           borderLeft: '',
           borderRight: '',
           borderBottom: '',

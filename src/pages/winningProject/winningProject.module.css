@@ -138,4 +138,44 @@
 }
 
 
-@keyframes textes {}
+@media screen and (max-width: 800px) {
+    .slideContainer {
+        width: 90%;
+    }
+    .seeMore{
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .slideContainer{
+        margin-top: 20px;
+    }
+    .details {
+        margin-top: 20px;
+    }
+
+    .slideContainer h2{
+        font-size: 20px;
+    }
+
+    .details p {
+        font-size: 16px;
+    }
+
+    .detilsText {
+        font-size: 18px;
+    }
+    .animationContainer{
+        max-height: 80px;
+    }
+
+    .slider p{
+        font-size: 13px;
+    }
+
+    .seeMore{
+        margin-top: 30px;
+        font-size: 10px;
+    }
+}

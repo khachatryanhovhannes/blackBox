@@ -3,7 +3,7 @@ import logo from "../../../public/logo.png"
 import arrow from "../../assets/login line.png"
 import classes from "./header.module.css"
 import { useState } from "react"
-import {Navbar} from "../"
+import { Navbar } from "../"
 
 
 const Header = () => {
@@ -19,8 +19,8 @@ const Header = () => {
         <>
             <div className={classes.header}>
                 <div className={classes.logoAndLogin}>
-                    <div className="logo">
-                        <Link to="/"> <img src={logo} alt="BlackBox" /></Link>
+                    <div>
+                        <Link to="/"> <img className={classes.logo} src={logo} alt="BlackBox" /></Link>
                     </div>
                     <div className={classes.login}>
                         <a href="#" className={classes.loginLink}>

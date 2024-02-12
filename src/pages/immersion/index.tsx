@@ -11,13 +11,14 @@ const Image = styled.div`
 
 
 const Immersion = () => {
+    const windowSize = window.innerWidth;
     const [position, setPosition] = useState({ x: 0, y: 0, rotate: 70 });
     const [imageParams, setimageParams] = useState({
         width: 0,
         height: 0,
-        borderLeft: '50px solid transparent',
-        borderRight: '50px solid transparent',
-        borderBottom: ' 100px solid #191919',
+        borderLeft: `${windowSize > 600 ? 50 : 25}px solid transparent`,
+        borderRight: `${windowSize > 600 ? 50 : 25}px solid transparent`,
+        borderBottom: `${windowSize > 600 ? 100 : 50}px solid #191919`,
         backgroundColor: "transparent",
         borderRadius: 0,
     });
@@ -39,8 +40,8 @@ const Immersion = () => {
 
             if (newX < containerWidth / 3 + 50) {
                 setimageParams({
-                    width: 100,
-                    height: 100,
+                    width: windowSize > 600 ? 100 : 50,
+                    height: windowSize > 600 ? 100 : 50,
                     borderLeft: '',
                     borderRight: '',
                     borderBottom: '',
@@ -51,16 +52,16 @@ const Immersion = () => {
                 setimageParams({
                     width: 0,
                     height: 0,
-                    borderLeft: '50px solid transparent',
-                    borderRight: '50px solid transparent',
-                    borderBottom: '100px solid #191919',
+                    borderLeft: `${windowSize > 600 ? 50 : 25}px solid transparent`,
+                    borderRight: `${windowSize > 600 ? 50 : 25}px solid transparent`,
+                    borderBottom: `${windowSize > 600 ? 100 : 50}px solid #191919`,
                     backgroundColor: "transparent",
                     borderRadius: 0,
                 });
             } else if (newX < containerWidth - 10 && newX > 50) {
                 setimageParams({
-                    width: 100,
-                    height: 100,
+                    width: windowSize > 600 ? 100 : 50,
+                    height: windowSize > 600 ? 100 : 50,
                     borderLeft: '',
                     borderRight: '',
                     borderBottom: '',
@@ -100,6 +101,8 @@ const Immersion = () => {
                         <span>Immersion</span>
                     </h2>
                     <p>
+
+                        <img src={image} className={classes.responsiveShowImage} alt="Meditation with Four Elements" />
                         The "Immersion" project created by Gevorg Grigoryan takes participants on a sensory journey by capturing real-life
                         experiences through a variety of multi-sensory devices. These captured experiences are then recreated in a physical
                         space, allowing participants to engage with them firsthand. The space is a tunnel that gradually narrows, creating

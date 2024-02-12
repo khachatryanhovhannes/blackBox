@@ -32,3 +32,25 @@
     flex-direction: column;
     gap: 100px;
 }
+
+@media screen and (max-width:800px){
+    .companyName {
+        font-size: 80px;
+    }
+}
+
+
+@media screen and (max-width:600px){
+    .home{
+        padding: 10px;
+    }
+    .animationContainer{
+        width: 90%;
+    }
+    .companyName{
+        font-size: 60px;
+    }
+    .headerDown{
+        font-size: 20px;
+    }
+}

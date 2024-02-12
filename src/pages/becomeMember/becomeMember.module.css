@@ -1,0 +1,107 @@
+.details {
+    width: 50%;
+    margin: 0 auto;
+    color: white;
+    position: relative;
+}
+
+.details h2 {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: 44px;
+    z-index: 100;
+}
+
+.details p {
+    font-size: 25px;
+}
+
+.detilsText {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: white;
+    font-size: 48px;
+    gap: 10px;
+}
+
+.form{
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form>div{
+    display: flex;
+    flex-direction: column;
+    font-weight: 100;
+    width: 40%;
+    gap: 15px
+}
+
+
+.form input{
+    padding: 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 0.1px solid white;
+    color: white;
+}
+
+.form input[type="file"]{
+    position: relative;
+    color: transparent;
+    cursor: pointer;
+}
+
+.form input[type="file"]::-webkit-file-upload-button {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.form input[type="file"]::after {
+    content: url("../../assets/file.png"); 
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+
+.form input[type="file"]::before{
+    content: "upload file";
+    color: rgba(255, 255, 255, 0.637);
+}
+
+.form input[type="submit"]{
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 800px) {
+    .details {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .details {
+        margin-top: 20px;
+    }
+
+    .details h2 {
+        font-size: 20px;
+    }
+
+    .details p {
+        font-size: 16px;
+    }
+
+    .detilsText {
+        font-size: 18px;
+    }
+}

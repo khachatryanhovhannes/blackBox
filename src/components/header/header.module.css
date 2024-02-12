@@ -66,3 +66,33 @@
     background-color: white;
     color: black;
 }
+
+
+@media screen and (max-width: 800px) {
+    .logo {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .logo {
+        width: 70%;
+    }
+
+    .loginLink {
+        width: 40px;
+        height: 40px;
+        gap: 2px;
+        font-size: 9px;
+    }
+
+    .loginLink>img{
+        width: 7px;
+    }
+
+    .navbarIcon{
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
