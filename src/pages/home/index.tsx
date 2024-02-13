@@ -23,10 +23,10 @@ const Home = () => {
   useEffect(() => {
     const animationContainer = document.getElementById("animationContainer")!;
     const handleMouseMove = (event: MouseEvent) => {
-
+      console.log(  )
       const containerWidth = animationContainer.offsetWidth;
-      setPosition({ x: event.layerX - 120, y: event.layerY - 10, rotate: position.rotate += 3 });
-      if (event.layerX < containerWidth / 3 + 50 && event.layerX > 50) {
+      setPosition({ x: event.offsetX - 120, y: event.offsetY - 10, rotate: position.rotate += 3 });
+      if (event.offsetX < containerWidth / 3 + 50 && event.offsetX > 50) {
         setimageParams({
           width: windowSize > 600 ? 120 : 60,
           height: windowSize > 600 ? 120 : 60,
@@ -36,7 +36,7 @@ const Home = () => {
           backgroundColor: "#191919",
           borderRadius: 0,
         })
-      } else if (event.layerX < 2 * (containerWidth / 3) + 50 && event.layerX > 150) {
+      } else if (event.offsetX < 2 * (containerWidth / 3) + 50 && event.offsetX > 150) {
         setimageParams({
           width: 0,
           height: 0,
@@ -46,7 +46,7 @@ const Home = () => {
           backgroundColor: "transparent",
           borderRadius: 0,
         })
-      } else if (event.layerX < containerWidth - 10 && event.layerX > 50) {
+      } else if (event.offsetX < containerWidth - 10 && event.offsetX > 50) {
         setimageParams({
           width: windowSize > 600 ? 120 : 60,
           height: windowSize > 600 ? 120 : 60,
