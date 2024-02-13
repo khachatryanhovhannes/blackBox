@@ -10,11 +10,14 @@ import Sponsers from "./sponsers";
 import ParticipantPortal from "./participantPortal";
 import BecomeMember from "./becomeMember";
 import ApplyProject from "./applyProject";
+import Contact from "./contact";
+import Events from "./events";
+import Blog from "./blog";
 
 export {
     Home, Error404, Details,
     NigrumArcaDetails, WinningProject,
     Mediation, Immersion, TheMountA,
     Sponsers, ParticipantPortal, BecomeMember,
-    ApplyProject
+    ApplyProject, Contact, Events, Blog
 }

@@ -31,8 +31,8 @@ const Navbar = ({ handleShowNavbar }: INavbarProps) => {
             href: '/winning-project'
         },
         {
-            name: 'Collaborators and Sponsors Sections',
-            href: '/collaborators-sponsors'
+            name: 'Collaborators',
+            href: '/collaborators'
         },
         {
             name: 'Participant Portal',

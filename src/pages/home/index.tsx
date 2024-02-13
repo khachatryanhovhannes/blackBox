@@ -25,7 +25,6 @@ const Home = () => {
     const handleMouseMove = (event: MouseEvent) => {
 
       const containerWidth = animationContainer.offsetWidth;
-      console.log(event.layerX)
       setPosition({ x: event.layerX - 120, y: event.layerY - 10, rotate: position.rotate += 3 });
       if (event.layerX < containerWidth / 3 + 50 && event.layerX > 50) {
         setimageParams({
@@ -38,7 +37,6 @@ const Home = () => {
           borderRadius: 0,
         })
       } else if (event.layerX < 2 * (containerWidth / 3) + 50 && event.layerX > 150) {
-        console.log
         setimageParams({
           width: 0,
           height: 0,

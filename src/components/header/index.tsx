@@ -23,10 +23,10 @@ const Header = () => {
                         <Link to="/"> <img className={classes.logo} src={logo} alt="BlackBox" /></Link>
                     </div>
                     <div className={classes.login}>
-                        <a href="#" className={classes.loginLink}>
+                        <Link to="/participant-portal" className={classes.loginLink}>
                             <span>Log in</span>
                             <img src={arrow} alt="arrow" className={classes.loginLinkImg} />
-                        </a>
+                        </Link>
 
                         <button className={classes.navbarIcon}
                             onClick={handleShowNavbar}

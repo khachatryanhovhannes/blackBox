@@ -6,6 +6,7 @@
 }
 
 .details h2 {
+    text-align: center;
     position: relative;
     margin: 0;
     padding: 0;
@@ -13,35 +14,27 @@
     z-index: 100;
 }
 
-.images{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 90%;
-    margin: 200px auto 0;
-}
-
-.images img {
-    max-width: 100%;
+.emptyPage{
+    color: white;
+    text-align: center;
+    margin-top: 100px;
 }
 
 
 @media screen and (max-width: 800px) {
-    .details{
+    .details {
         width: 90%;
-    }
-    .images {
-        flex-wrap: wrap;
-        margin-top: 100px;
     }
 }
 
-@media screen and (max-width: 600px){
-    .details{
+@media screen and (max-width: 600px) {
+    .details {
         margin-top: 20px;
     }
-    .details h2{
+
+    .details h2 {
         font-size: 20px;
     }
+
 
 }

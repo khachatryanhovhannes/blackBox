@@ -58,7 +58,7 @@ const Immersion = () => {
                     backgroundColor: "transparent",
                     borderRadius: 0,
                 });
-            } else if (newX < containerWidth - 10 && newX > 50) {
+            } else if (newX < containerWidth - 50 && newX > 50) {
                 setimageParams({
                     width: windowSize > 600 ? 100 : 50,
                     height: windowSize > 600 ? 100 : 50,

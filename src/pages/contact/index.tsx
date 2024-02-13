@@ -1,16 +1,19 @@
-import classes from "./theMountA.module.css"
-import detailsImage from "../../assets/box.png"
+import classes from "./contact.module.css"
 import styled from 'styled-components';
 import { useEffect, useState } from "react";
-import image from "../../assets/sens-3.jpg";
+import phone from "../../assets/phone 1.png"
+import email from "../../assets/mail 1.png"
+import location from "../../assets/location 1.png"
+import instagram from "../../assets/instagram 1.png"
+import facebook from "../../assets/facebook 1.png"
+import linkedin from "../../assets/linkedin 1.png"
 
 const Image = styled.div`
   position: absolute;
   transition: all ease-in-out;
 `;
+const Contact = () => {
 
-
-const TheMountA = () => {
     const windowSize = window.innerWidth;
     const [position, setPosition] = useState({ x: 0, y: 0, rotate: 70 });
     const [imageParams, setimageParams] = useState({
@@ -80,44 +83,38 @@ const TheMountA = () => {
 
     return (
         <>
-            <div className={classes.container}>
-
-                <div className={classes.details}>
-                    <Image
-                        style={{
-                            left: position.x,
-                            top: position.y,
-                            rotate: position.rotate + "deg",
-                            width: imageParams.width,
-                            height: imageParams.height,
-                            borderLeft: imageParams.borderLeft,
-                            borderRight: imageParams.borderRight,
-                            borderBottom: imageParams.borderBottom,
-                            backgroundColor: imageParams.backgroundColor,
-                            borderRadius: imageParams.borderRadius + "%",
-                        }}
-                    />
-                    <h2 id="animationContainer">
-                        <span>The Mount A</span>
-                    </h2>
-                    <p>
-
-                        <img src={image} className={classes.responsiveShowImage} alt="Meditation with Four Elements" />
-                        "The Mount A" project authored by Gohar Martirosyan is a virtual reality film that immerses viewers in a metaphorical
-                        journey up Mount Ararat, blurring reality and imagination. It draws parallels with the mystical Mount Analogue and
-                        explores themes of identity, environment and spirituality. This project combines futuristic technology with breathtaking
-                        landscapes, offering a personalized journey through time via virtual reality.
-                    </p>
+            <div className={classes.details}>
+                <Image
+                    style={{
+                        left: position.x,
+                        top: position.y,
+                        rotate: position.rotate + "deg",
+                        width: imageParams.width,
+                        height: imageParams.height,
+                        borderLeft: imageParams.borderLeft,
+                        borderRight: imageParams.borderRight,
+                        borderBottom: imageParams.borderBottom,
+                        backgroundColor: imageParams.backgroundColor,
+                        borderRadius: imageParams.borderRadius + "%",
+                    }}
+                />
+                <h2 id="animationContainer">
+                    <span>Contact and Support</span>
+                </h2>
+                <div className={classes.addressData}>
+                    <a href="tel:+37455135558"><img src={phone} alt="" /><span> Phone: +(374)55 135558</span></a>
+                    <a href="mailto:gtc@eif.am"><img src={email} alt="" /><span> Gmail: gtc@eif.am</span></a>
+                    <p><img src={location} alt="" /><span> Location: 1 Gayi Street, Gyumri, Armenia</span></p>
                 </div>
-                <img src={image} alt="Meditation with Four Elements" />
+                <div className={classes.socialMedia}>
+                    <a href="https://www.instagram.com/gyumritechnologycenter/" target="_black"><img src={instagram} alt="instagram" /></a>
+                    <a href="https://www.facebook.com/GyumriTechnologyCenter" target="_black"><img src={facebook} alt="facebook" /></a>
+                    <a href="https://www.linkedin.com/company/gyumritechnologycenter/" target="_black"><img src={linkedin} alt="linkedin" /></a>
+                </div>
+            </div>
 
-            </div>
-            <div className={classes.detilsText}>
-                <img src={detailsImage} alt="box" />
-                The Mount A
-            </div>
         </>
     );
 }
 
-export default TheMountA
+export default Contact

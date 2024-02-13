@@ -14,7 +14,7 @@ const Image = styled.div`
 const Sponsers = () => {
 
     const windowSize = window.innerWidth;
-    const [position, setPosition] = useState({ x: 0, y: 120, rotate: 70 });
+    const [position, setPosition] = useState({ x: 0, y: windowSize > 800 ? 120 : 50, rotate: 70 });
     const [imageParams, setimageParams] = useState({
         width: 0,
         height: 0,
@@ -50,7 +50,7 @@ const Sponsers = () => {
                     backgroundColor: "#191919",
                     borderRadius: 0,
                 });
-            } else if (newX < 2 * (containerWidth / 3) + 50 && newX > 150) {
+            } else if (newX < 2 * (containerWidth / 3) && newX > 150) {
                 setimageParams({
                     width: 0,
                     height: 0,
@@ -60,7 +60,7 @@ const Sponsers = () => {
                     backgroundColor: "transparent",
                     borderRadius: 0,
                 });
-            } else if (newX < containerWidth - 10 && newX > 50) {
+            } else if (newX < containerWidth - 50 && newX > 50) {
                 setimageParams({
                     width: windowSize > 600 ? 120 : 50,
                     height: windowSize > 600 ? 120 : 50,
@@ -71,7 +71,7 @@ const Sponsers = () => {
                     borderRadius: 50,
                 });
             } else {
-                setPosition({ x: 0, y: 120, rotate: 70 });
+                setPosition({ x: 0, y: windowSize > 800 ? 120 : 50, rotate: 70 });
             }
         };
 
@@ -98,7 +98,7 @@ const Sponsers = () => {
                     }}
                 />
                 <h2 id="animationContainer">
-                    <span>Collaborators and Sponsors
+                    <span>Collaborators
                     </span>
                 </h2>
             </div>
