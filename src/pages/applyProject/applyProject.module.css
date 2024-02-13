@@ -47,7 +47,8 @@
     text-wrap: nowrap;
 }
 
-.form input {
+.form input, .form textarea  {
+    height: 40px;
     padding: 10px;
     background: transparent;
     border: none;

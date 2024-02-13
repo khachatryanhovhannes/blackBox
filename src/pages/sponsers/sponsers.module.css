@@ -21,6 +21,10 @@
     margin: 200px auto 0;
 }
 
+.images>div:nth-child(3){
+    width: 12%;
+}
+
 .images img {
     max-width: 100%;
 }
@@ -34,6 +38,9 @@
         flex-wrap: wrap;
         margin-top: 100px;
     }
+    .images>div:nth-child(3){
+        width: 50%;
+    }
 }
 
 @media screen and (max-width: 600px){
@@ -42,6 +49,9 @@
     }
     .details h2{
         font-size: 20px;
+    }
+    .images>div:nth-child(3){
+        width: 100%;
     }
 
 }
